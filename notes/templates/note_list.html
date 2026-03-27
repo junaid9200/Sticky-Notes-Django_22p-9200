@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>My Sticky Notes</h2>
+    <a href="{% url 'note_create' %}">Create New Note</a>
+    <br><br>
+    <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+        {% for note in notes %}
+            <div style="background-color: {{ note.color }}; padding: 15px; border: 1px solid #ccc; width: 200px; box-shadow: 2px 2px 5px rgba(0,0,0,0.1);">
+                <h3>{{ note.title }}</h3>
+                <p>{{ note.content }}</p>
+                <small>Last updated: {{ note.updated_at|date:"M d, Y" }}</small>
+                <br><br>
+                <a href="{% url 'note_edit' note.id %}">Edit</a> |
+                <a href="{% url 'note_delete' note.id %}">Delete</a>
+            </div>
+        {% empty %}
+            <p>You don't have any notes yet.</p>
+        {% endfor %}
+    </div>
+{% endblock %}
