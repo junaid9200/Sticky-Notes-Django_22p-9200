@@ -20,3 +20,5 @@ Follow these steps to get the project up and running on your local machine:
 Ensure you have Python installed on your computer. Then, install Django by running the following command in your terminal:
 ```bash
 pip install django
+### 2. Apply Database Migrations
+Set up the default SQLite database and create the necessary tables for the application:
