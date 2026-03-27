@@ -14,10 +14,10 @@ Follow these steps to run the project on your local machine:
 
 ### 1. Install Dependencies
 Make sure you have Python installed, then install Django by running:
-pip install django
+--> pip install django
 Set up the SQLite database and create the necessary tables:
-python manage.py migrate
+--> python manage.py migrate
 Start the Django server:
-python manage.py runserver
+--> python manage.py runserver
 Open your web browser and go to:
 https://www.google.com/search?q=http://127.0.0.1:8000/register/
